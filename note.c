@@ -110,10 +110,10 @@ void
 usage(void)
 {
 	fputs("usage: note [option]\n"
-			"  -a    append to the main file\n"
-			"  -d    append using dmenu\n"
-			"  -s    show last 10 notes\n"
-			"  -e    edit the main file\n", stderr);
+		"  -a    append to the main file\n"
+		"  -d    append using dmenu\n"
+		"  -s    show last 10 notes\n"
+		"  -e    edit the main file\n", stderr);
 	exit(1);
 }
 
