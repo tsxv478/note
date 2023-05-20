@@ -87,7 +87,7 @@ last(char *fullpath)
 	}
 
 	while (fgets(s, sizeof(s), fp) != NULL) {
-	    printf("%s", s);
+		printf("%s", s);
 	}
 
 	fclose(fp);
