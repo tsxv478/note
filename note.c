@@ -42,7 +42,7 @@ append(unsigned int d, char *fullpath)
 			exit(1);
 		}
 		break;
-	default: exit(1);
+	default: abort();
 	}
 
 	if (!(fp = fopen(fullpath, "a"))) {
