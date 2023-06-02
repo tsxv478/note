@@ -123,7 +123,7 @@ main(int argc, char *argv[])
 	int opt;
 	char fullpath[100];
 
-	if ((argc < 2) || (argc >= 3)) {
+	if (argc != 2) {
 		usage();
 	}
 
