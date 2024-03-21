@@ -3,15 +3,15 @@
 #include <time.h>
 #include <unistd.h>
 
-static void append(unsigned int, char *);
+#include "config.h"
+
+static void append(int, char *);
 static void last(char *);
 static void edit(char *);
 static void usage(void);
 
-#include "config.h"
-
 void
-append(unsigned int d, char *fullpath)
+append(int d, char *fullpath)
 {
 	FILE *fp;
 	FILE *read;
@@ -52,7 +52,7 @@ append(unsigned int d, char *fullpath)
 
 	t = time(NULL);
 	if (!strftime(timebuf, sizeof(timebuf), TIMEFORMAT, localtime(&t))) {
-		fputs("strftime returned 0\n", stderr);
+		fputs("strftime: result string exceeds buffer size\n", stderr);
 		exit(1);
 	}
 
