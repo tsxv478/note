@@ -76,7 +76,9 @@ last(char *fullpath)
 	}
 
 	fseek(fp, 0, SEEK_END);
-	pos = ftell(fp);
+
+	if (!(pos = ftell(fp)))
+		exit(0);
 
 	while (1) {
 		fseek(fp, --pos, SEEK_SET);
